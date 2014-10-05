@@ -1,20 +1,17 @@
 package cc.fozone.support.text;
 
-import java.io.IOException;
-
-import org.markdown4j.Markdown4jProcessor;
+import org.pegdown.Extensions;
+import org.pegdown.PegDownProcessor;
 
 public class MarkdownUtils {
+	private static PegDownProcessor processor;
+	
+	static {
+		processor = new PegDownProcessor(Extensions.ALL);
+	}
 	
 	public static String html(String markdown) {
-		Markdown4jProcessor processor = new Markdown4jProcessor();
-		String result = null;
-		try {
-			result = processor.process(markdown);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			result = null;
-		}
+		String result =processor.markdownToHtml(markdown);
 		return result;
 	}
 }
