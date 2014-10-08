@@ -4,11 +4,14 @@
 
 Maven
 ==========
+
+```Xml
 <dependency>
 	<groupId>cc.fozone</groupId>
 	<artifactId>Support.FO</artifactId>
 	<version>1.0.0.RELEASE</version>
 </dependency>
+```
 
 状态 
 ==========
