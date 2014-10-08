@@ -28,7 +28,7 @@ public class CommandUtils {
 		if(desktop == null) return ;
 		
 		try {
-			URI uri = new URI(url);
+			final URI uri = new URI(url);
 			Thread t = new Thread(new Runnable(){
 
 				@Override
@@ -57,7 +57,7 @@ public class CommandUtils {
 		if(StringUtils.isBlank(email)) return ;
 		if(desktop == null) return ;
 		try {
-			URI uri = new URI("mailto:"+email);
+			final URI uri = new URI("mailto:"+email);
 			Thread t = new Thread(new Runnable(){
 
 				@Override
